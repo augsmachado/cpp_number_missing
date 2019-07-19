@@ -20,4 +20,4 @@ The narrative of what the system and the user performed is described through a s
 3. The system shows a table with 99 numbers and the question: "**What number is missing?**".
 4. The user enters your numeric answer between 1 and 100.
 5. If the answer is correct, the user starts a new level. However, if the answer is incorrect, the system shows a message: "**You lose! Want to play again? Yes [y] or no [n]?**". If yes, starts a new game.
-6. To win, the user needs to hit 10 numbers in sequence.
+6. To win, the user needs to hit occult number of your screen.
