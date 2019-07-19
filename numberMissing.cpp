@@ -2,7 +2,7 @@
 	Name: What number is missing?
 	Copyright: 2019 Augusto Machado Ramos
 	Author: Augusto Machado Ramos
-	Date: 07/18/2019 10:13 am
+	Date: 07/19/2019 11:13 am
 	Comment language: en
 	Description: 
 		The goal was to develop a simple game to search a number missing
@@ -25,7 +25,8 @@ void printGameBoard(int *numberRandomMissing);
 
 int main() {	
 	int numberRandomMissing;
-	int level = 0, answerUser = 0;
+	int level = 0;
+	int answerUser = 0;
 	bool isTheAnswerCorrect = true;
 	
 	// Based on clock computer, the system generate a random number
@@ -34,12 +35,13 @@ int main() {
 	while (isTheAnswerCorrect == true) {
 		// A random function return a number between zero and one hundred
 		numberRandomMissing = (1 + (rand() % 100));
-		
+
 		printGameBoard(&numberRandomMissing);
-		
+	
 		cout << "What number is missing?" << endl;
 		cin >> answerUser;
-		
+	
+		// If user's answer is incorrect, close the game
 		if (numberRandomMissing != answerUser){
 			isTheAnswerCorrect = false;
 		} else {
@@ -47,7 +49,10 @@ int main() {
 			level++;
 		}
 	}
-	cout << level << endl;
+	
+	// Show the score in the end game 
+	cout << endl << endl;
+	cout << "Your best score was at level " << level << endl;
 	
 	return 0;
 }
